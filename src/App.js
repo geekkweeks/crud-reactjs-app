@@ -21,7 +21,7 @@ export default class App extends Component {
         phone: "56456"
       },
       {
-        id: 1,
+        id: 3,
         name: "Yono",
         address: "Payakumbuh",
         phone: "23432"
