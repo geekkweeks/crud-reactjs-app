@@ -8,20 +8,24 @@ const columns = [
   {
     dataField: "id",
     text: "User ID",
+    sort: true,
     headerStyle: () => {
-        return {width: "5%"}
-    }
+      return { width: "5%" };
+    },
   },
   {
     dataField: "name",
+    sort: true,
     text: "User Name",
   },
   {
     dataField: "address",
+    sort: true,
     text: "Address",
   },
   {
     dataField: "phone",
+    sort: true,
     text: "Phone",
   },
   {
@@ -47,10 +51,22 @@ const columns = [
   },
 ];
 
+const defaultSorted = [
+  {
+    dataField: "id",
+    order: "desc",
+  },
+];
+
 export const TableComponent = (props) => {
   return (
     <Container>
-      <BootstrapTable keyField="id" data={props.users} columns={columns} />
+      <BootstrapTable
+        keyField="id"
+        data={props.users}
+        columns={columns}
+        defaultSorted={defaultSorted}
+      />
     </Container>
   );
 };
