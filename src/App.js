@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NavBarComponent from './components/NavBarComponent'
 import JumbotronComponent from './components/JumbotronComponent'
+import TableComponent from './components/TableComponent'
 
 export default class App extends Component {
 
@@ -33,6 +34,7 @@ export default class App extends Component {
       <div>
         <NavBarComponent />
         <JumbotronComponent  title={this.state.title}/>
+        <TableComponent users={this.state.users} />
       </div>
     )
   }
